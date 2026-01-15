@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import bodyParser from "body-parser";
 app.use(bodyParser.json()); //req.body
-import Menu from "./models/Menu.js";
+import Menu from "./models/menu.js";
 const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
