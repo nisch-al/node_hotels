@@ -1,8 +1,10 @@
 //this file is used to connect to the MongoDB database using mongoose
-
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 //define the mongooose connection URL
-const mongoURL = "mongodb://localhost:27017/hotels";
+// const mongoURL = "mongodb://localhost:27017/hotels";
+const mongoURL = process.env.DB_URL;
 
 // Connect to MongoDB (NO deprecated options)
 mongoose.connect(mongoURL);
